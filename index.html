@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup & Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sign In Form -->
+        <div class="form-container sign-in-container">
+            <h1>Sign In</h1>
+            
+            <div class="social-container">
+                <div class="social-btn" onclick="socialLogin('facebook')">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="social-btn" onclick="socialLogin('google')">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="social-btn" onclick="socialLogin('twitter')">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div class="social-btn" onclick="socialLogin('linkedin')">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+            
+            <div class="divider">or use your email</div>
+            
+            <form id="loginForm">
+                <div id="loginMessage" class="message"></div>
+                <input type="email" placeholder="Email" id="loginEmail" required />
+                <input type="password" placeholder="Password" id="loginPassword" required />
+                <div class="forgot-password">
+                    <a onclick="showForgotPassword()">Forgot password?</a>
+                </div>
+                <button type="submit">Sign In</button>
+            </form>
+            
+            <div class="toggle-form">
+                Don't have an account? <a onclick="showSignUp()">Sign Up</a>
+            </div>
+        </div>
+        
+        <!-- Sign Up Form -->
+        <div class="form-container sign-up-container">
+            <h1>Create Account</h1>
+            
+            <div class="social-container">
+                <div class="social-btn" onclick="socialSignup('facebook')">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="social-btn" onclick="socialSignup('google')">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="social-btn" onclick="socialSignup('twitter')">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div class="social-btn" onclick="socialSignup('linkedin')">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+            
+            <div class="divider">or use your email</div>
+            
+            <form id="signupForm">
+                <div id="signupMessage" class="message"></div>
+                <input type="text" placeholder="Name" id="signupName" required />
+                <input type="email" placeholder="Email" id="signupEmail" required />
+                <input type="password" placeholder="Password" id="signupPassword" required />
+                <button type="submit">Sign Up</button>
+            </form>
+            
+            <div class="toggle-form">
+                Already have an account? <a onclick="showSignIn()">Sign In</a>
+            </div>
+        </div>
+        
+        <!-- Forgot Password Form -->
+        <div class="form-container forgot-password-container">
+            <h1>Reset Password</h1>
+            
+            <form id="forgotPasswordForm">
+                <div id="forgotPasswordMessage" class="message"></div>
+                <p>Enter your email address and we'll send you a link to reset your password.</p>
+                <input type="email" placeholder="Email" id="forgotPasswordEmail" required />
+                <button type="submit">Send Reset Link</button>
+                <div class="back-to-login">
+                    <a onclick="showSignIn()">Back to Sign In</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+    <p>&copy; 2025 All Rights Reserved. Designed and Developed by Ganesh Reddy</p>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
